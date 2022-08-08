@@ -1,0 +1,15 @@
+.opened {
+    display: block;
+    z-index: 999;
+}
+
+.modal {
+    width: 60%;
+    margin: 0 auto;
+    box-shadow: 2px 1px 7px -1px #222222;
+    border-radius: 6px;
+}
+
+.closed {
+    display: none;
+}
