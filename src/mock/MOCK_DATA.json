@@ -1,0 +1,92 @@
+[
+    {
+        "id": "2087",
+        "name": "Waverley Wiggington",
+        "gender": "Male",
+        "email": "wwiggington0@yahoo.co.jp",
+        "salary": "$0.00",
+        "joinDate": "02/17/2022",
+        "position": "Business Development"
+    },
+    {
+        "id": "5376",
+        "name": "Eloisa Martinovic",
+        "gender": "Female",
+        "email": "emartinovic1@eventbrite.com",
+        "salary": "$0.00",
+        "joinDate": "03/08/2022",
+        "position": "Engineering"
+    },
+    {
+        "id": "949",
+        "name": "Missie Maden",
+        "gender": "Female",
+        "email": "mmaden2@fema.gov",
+        "salary": "$0.00",
+        "joinDate": "03/31/2022",
+        "position": "Sales"
+    },
+    {
+        "id": "2",
+        "name": "Cristina Croxall",
+        "gender": "Female",
+        "email": "ccroxall3@t-online.de",
+        "salary": "$0.00",
+        "joinDate": "04/08/2022",
+        "position": "Product Management"
+    },
+    {
+        "id": "587",
+        "name": "Gilberte Sherar",
+        "gender": "Female",
+        "email": "gsherar4@trellian.com",
+        "salary": "$0.00",
+        "joinDate": "10/11/2021",
+        "position": "Marketing"
+    },
+    {
+        "id": "1086",
+        "name": "Franz Reddick",
+        "gender": "Male",
+        "email": "freddick5@examiner.com",
+        "salary": "$0.00",
+        "joinDate": "09/04/2021",
+        "position": "Marketing"
+    },
+    {
+        "id": "990",
+        "name": "Ralina Stiling",
+        "gender": "Female",
+        "email": "rstiling6@dropbox.com",
+        "salary": "$0.00",
+        "joinDate": "03/08/2022",
+        "position": "Engineering"
+    },
+    {
+        "id": "518",
+        "name": "Natale Bareham",
+        "gender": "Male",
+        "email": "nbareham7@google.com.br",
+        "salary": "$0.00",
+        "joinDate": "12/08/2021",
+        "position": "Legal"
+    },
+    {
+        "id": "88",
+        "name": "Evita Marlowe",
+        "gender": "Female",
+        "email": "emarlowe8@usa.gov",
+        "salary": "$0.00",
+        "joinDate": "11/25/2021",
+        "position": "Human Resources"
+    },
+    {
+        "id": "000",
+        "name": "Mil Wrack",
+        "gender": "Female",
+        "email": "mwrack9@usda.gov",
+        "salary": "$0.00",
+        "joinDate": "06/01/2022",
+        "position": "Training"
+    }
+]
