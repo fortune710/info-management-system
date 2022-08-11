@@ -1,16 +1,23 @@
 import { useForm } from "react-hook-form";
 import React from "react";
 
-const FormInput = ({ register, name, ...otherProps }) => {
+import './form-input.styles.scss';
+
+const FormInput = ({ register, name, errorMessage ,...otherProps }) => {
+
     return(
-        <React.Fragment>
-
+        <div className="input-group">
+            <label htmlFor={name}>{name}</label>
             <input 
+                name={name}
                 {...register(name, 
-                    { required: 'This field cannot be left blank'})} 
+                    { required: errorMessage })} 
 
-                {...otherProps}/>
-        </React.Fragment>
+                {...otherProps}
+            />
+            <p className="error-message">{ errorMessage }</p>
+            
+        </div>
     )
 }
 

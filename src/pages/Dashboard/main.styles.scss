@@ -1,0 +1,70 @@
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+}
+
+.main-area-content{
+    display: flex;
+
+
+    .side-menu{
+        background: var(--primary);
+        height: 100vh;
+
+        &.opened-menu { width: auto; }
+        &.closed-menu { 
+            width: 70px;
+            transition: 2s all ease-in;
+        }
+        
+        .menu-list{
+            list-style-type: none;
+            padding: 0 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+
+            .menu-list-item {
+                height: 60px;
+                @include flex-center();
+                gap: 1.2em;
+                border-radius: 6px;
+                padding: 0 8px;
+                transition: 0.2s all ease-in;
+                
+                &:hover:not(.active){
+                    filter: brightness(0.5);
+                }
+                h4{ margin: 0; }
+                svg{ font-size: 23px;}
+            }
+
+            .menu-list-item-closed {
+                aspect-ratio: 1;
+                border-radius: 3px;
+                @include flex-center();
+                justify-content: center;
+            }
+            .active{
+                background: #fff;
+                color: var(--primary);
+            }
+
+            .not-active {
+                color:#fff;
+            }
+
+            .log-out {
+                background: #fff;
+                color: var(--danger);
+            }
+        }
+
+    }
+}
+
+
+.expand-menu {
+    background-color: var(--secondary);
+    color: var(--primary);
+}

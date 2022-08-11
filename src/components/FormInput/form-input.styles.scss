@@ -1,0 +1,41 @@
+
+.input-group {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.15em;
+    
+    label{
+        text-transform: capitalize;
+    }
+
+    input {
+        width: 100%; 
+        border: 1.5px solid var(--dark);
+        height: 30px;
+        border-radius: 6px;
+        padding: 0 8px;
+        
+        &:invalid{
+            border-color: var(--danger);
+            
+            +.error-message{
+                display: block;
+            }
+        }
+
+        &:focus, &:active {
+            border-color: var(--primary);
+        }
+    }
+
+    p{
+        display: none;
+        color: var(--danger);
+        margin: 2px 0;
+        transition: 0.1s ease-in all;
+        font-size: 12px;
+        font-weight: 400;
+    }
+}

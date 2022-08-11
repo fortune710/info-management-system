@@ -1,7 +1,7 @@
 const HomePage = () => {
 
     return(
-        <main>
+        <main className="app-page">
             home
         </main>
     )

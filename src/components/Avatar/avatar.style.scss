@@ -1,0 +1,7 @@
+.avatar{
+    border-radius: 50%;
+    background-image: attr(data-src url);
+    width: 50px;
+    height: 50px;
+    border: 3px solid var(--orange)
+}
