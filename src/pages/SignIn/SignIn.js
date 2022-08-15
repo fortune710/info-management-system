@@ -4,10 +4,6 @@ import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 
 //Component Imports
-import FormInput from '../../components/FormInput/FormInput';
-import Modal from '../../components/Modal/Modal';
-
-import Button from '../../components/Button/Button';
 
 import Login from '../../assets/login.webp';
 
@@ -15,6 +11,7 @@ import Login from '../../assets/login.webp';
 //import Firebase from '../firebase-init';
 
 import './signin.styles.scss';
+import { Button, TextField } from '@mui/material';
 
 const SignInPage = () => {
     //const auth = getAuth(Firebase);
@@ -26,9 +23,15 @@ const SignInPage = () => {
     });
     const router = useNavigate();
 
+    const styles = {
+        width: 300,
+        margin: '0 auto',
+        textTransform: 'capitalize'
+    }
+
     const completeSignIn = () => {
         const { email, password } = getValues();
-        router('/dashboard/home', { replace: true })
+        router('/dashboard/home')
         
         /*
         signInWithEmailAndPassword(auth, email, password)
@@ -45,33 +48,42 @@ const SignInPage = () => {
 
     return(
         <main>
-            <img src={Login} alt={'People holding key and padlock'} />
 
             <form onSubmit={handleSubmit(completeSignIn)}>
-                <FormInput 
-                    register={register}
-                    name={'email'} 
-                    type="email" 
-                    placeholder="Please enter your email"
-                    errorMessage={'Not a valid email'}
-                />
-
-                <FormInput 
-                    register={register}
-                    name={'password'} 
-                    type="password" 
+                <h1>Sign In</h1>
+                
+                <TextField 
+                    {...register('email')} 
+                    variant='outlined'
+                    type={'email'}
+                    label="Email"
                     placeholder="Please enter your email"
                 />
-
-                <Button color={'primary'} type='submit'>
+                
+                <TextField 
+                    {...register('password')} 
+                    variant='outlined'
+                    type={'password'}
+                    label="Password"
+                    placeholder="Please enter your password"
+                />
+                
+                <Button 
+                    sx={styles}
+                    variant='contained' 
+                    type='submit'>
                     Login
                 </Button>
+                
+                <Button sx={styles} onClick={() => router('/forgot-password')}>
+                    Forgot Password ?
+                </Button>
 
+                
+
+                
             </form>
 
-            <Link to={'/forgot-password'}>
-                Forgot Password?
-            </Link>
 
         </main>
     )
