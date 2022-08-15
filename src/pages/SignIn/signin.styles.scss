@@ -3,12 +3,7 @@ form{
     display: flex;
     flex-direction: column;
     gap: 1.2em;
-}
-
-main {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    margin: 0 auto;
 }
 
 a, a:active, a:visited{
@@ -16,4 +11,5 @@ a, a:active, a:visited{
     color: var(--primary);
     text-decoration: none;
     font-weight: 500;
+    text-align: center;
 }

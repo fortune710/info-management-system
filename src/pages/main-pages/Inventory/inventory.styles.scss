@@ -1,0 +1,19 @@
+.code-1{ background: var(--dark-green); }
+.code-2, .code-3{ background: var(--danger); }
+
+.chip {
+    color: #fff;
+    width: max-content;
+    padding: 3px 6px;
+    border-radius: 20px;
+}
+
+.table-container::-webkit-scrollbar {
+    width: 5px;
+
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background-color: var(--secondary);
+    border-radius: 10px;
+}

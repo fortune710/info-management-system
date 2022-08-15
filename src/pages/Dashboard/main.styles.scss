@@ -8,10 +8,17 @@
 
 
     .side-menu{
-        background: var(--primary);
+        background: var(--dark);
         height: 100vh;
 
-        &.opened-menu { width: auto; }
+        &.opened-menu { 
+            width: auto;
+
+            .menu-list {
+                width: 200px !important;
+            }
+        }
+
         &.closed-menu { 
             width: 70px;
             transition: 2s all ease-in;
@@ -25,15 +32,16 @@
             gap: 0.5em;
 
             .menu-list-item {
-                height: 60px;
+                height: 50px;
                 @include flex-center();
                 gap: 1.2em;
                 border-radius: 6px;
                 padding: 0 8px;
                 transition: 0.2s all ease-in;
+                background: inherit;
                 
                 &:hover:not(.active){
-                    filter: brightness(0.5);
+                    background: lighten($color: #121212, $amount: 6);
                 }
                 h4{ margin: 0; }
                 svg{ font-size: 23px;}
@@ -46,17 +54,20 @@
                 justify-content: center;
             }
             .active{
-                background: #fff;
-                color: var(--primary);
+                background: lighten($color: #121212, $amount: 7);
+                color: var(--success);
             }
 
             .not-active {
-                color:#fff;
+                color: darken($color: #fff, $amount: 30);
             }
 
             .log-out {
-                background: #fff;
                 color: var(--danger);
+
+                &:hover {
+                    background: #fff !important;
+                }
             }
         }
 
