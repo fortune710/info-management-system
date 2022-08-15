@@ -1,16 +1,23 @@
-import Avatar from '../../../components/Avatar/Avatar'
 import Firebase from '../../../firebase-init';
-import { query, collection, getDocs, addDocs, getFirestore } from 'firebase/firestore';
-import { useEffect, useState } from 'react';
-import Button from '../../../components/Button/Button'
-const StaffPage = () => {
+import { query, collection, getDocs, getFirestore } from 'firebase/firestore';
+import { useEffect, useState, useId } from 'react';
+import { AvatarGroup, Button } from '@mui/material';
 
+import staffData from '../../../mock/MOCK_DATA.json'
+import { useNavigate } from 'react-router-dom';
+import styles from './staff-page.module.scss';
+
+import { Avatar } from '@mui/material';
+
+const StaffPage = () => {
+    const navigate = useNavigate();
     const [staff, setStaff] = useState([])
     const firestore = getFirestore(Firebase);
     const [screenLoading, setscreenLoading] = useState(true)
 
     
     useEffect(() => {
+        /*
         async function getStaff(){
             const ref = collection('staff')
             getDocs(firestore, ref)
@@ -22,28 +29,35 @@ const StaffPage = () => {
         .then(() => {
             setscreenLoading(false)
         })
-
+        */
+        setStaff(staffData)
         
     })
 
     return(
-        <main className="app-page">
+        <main className="dashboard-pages">
             <div>
                 <h1>Your Staff</h1>
             </div>
 
-            <div className="staff-detail">
-                <section className='p-8'>
-                    <div className='flex w-full'>
+            <div className={styles.staffDetail}>
+                <section className={styles.section}>
+                    <h3>Staff</h3>
+                    <AvatarGroup max={4}>
                     {
-                        staff.map(({ name, profileURL}) => (
-                            <Avatar name={name} src={profileURL} />
+                        staff.filter((el, index) => index < 5).map(({ name, profileURL }, index) => (
+                            <Avatar key={index} />
                         ))
                     }
-                    </div>
-                    <Button>
-                        Add a New Staff
+                    </AvatarGroup>
+                    
+                    <Button 
+                        variant='contained' 
+                        disableElevation 
+                        onClick={() => navigate('/dashboard/add-staff')}>
+                        Add Staff
                     </Button>
+                    
                 </section>
 
             </div>

@@ -1,7 +1,14 @@
 import './avatar.styles.scss';
 
-const Avatar = ({ src, name }) => (
-    <div title={name} className="avatar" data-src={src}/>
+const Avatar = ({ src, name, zIndex }) => (
+    <div 
+        title={name} 
+        className="avatar"
+        style={{
+            backgroundImage: `url(${src})`,
+            zIndex: zIndex
+        }}
+    />
 )
 
 export default Avatar;

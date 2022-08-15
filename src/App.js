@@ -4,11 +4,13 @@ import MainAreaPage from './pages/Dashboard/Main';
 import SignInPage from './pages/SignIn/SignIn';
 
 import HomePage from "./pages/main-pages/Home"
-import InventoryPage from "./pages/main-pages/Inventory";
+import InventoryPage from "./pages/main-pages/Inventory/Inventory";
 import StaffPage from "./pages/main-pages/StaffPage/Staff";
 import SettingsPage from "./pages/main-pages/Settings";
 
 import "./theme/variables.scss";
+import './App.scss';
+import AddStaffPage from './pages/main-pages/StaffPage/AddStaff';
 
 function App() {
   return (
@@ -19,6 +21,7 @@ function App() {
         <Route path="home" element={<HomePage/>} />
         <Route path="inventory" element={<InventoryPage/>} />
         <Route path="staff" element={<StaffPage/>} />
+        <Route path='add-staff' element={<AddStaffPage/>} />
         <Route path="settings" element={<SettingsPage/>} />
       </Route>
       <Route exact path='/forgot-password' element={<ForgotPasswordPage/>} />
