@@ -6,7 +6,8 @@
         "email": "wwiggington0@yahoo.co.jp",
         "salary": "$0.00",
         "joinDate": "02/17/2022",
-        "position": "Business Development"
+        "position": "Business Development",
+        "profileURL": "https://avatars.dicebear.com/api/initials/WaverlyWigginton.svg"
     },
     {
         "id": "5376",
@@ -15,7 +16,8 @@
         "email": "emartinovic1@eventbrite.com",
         "salary": "$0.00",
         "joinDate": "03/08/2022",
-        "position": "Engineering"
+        "position": "Engineering",
+        "profileURL": "https://avatars.dicebear.com/api/initials/:seed.svg"
     },
     {
         "id": "949",
@@ -24,7 +26,8 @@
         "email": "mmaden2@fema.gov",
         "salary": "$0.00",
         "joinDate": "03/31/2022",
-        "position": "Sales"
+        "position": "Sales",
+        "profileURL": "https://avatars.dicebear.com/api/initials/:seed.svg"
     },
     {
         "id": "2",
@@ -33,7 +36,8 @@
         "email": "ccroxall3@t-online.de",
         "salary": "$0.00",
         "joinDate": "04/08/2022",
-        "position": "Product Management"
+        "position": "Product Management",
+        "profileURL": "https://avatars.dicebear.com/api/initials/:seed.svg"
     },
     {
         "id": "587",
@@ -42,7 +46,8 @@
         "email": "gsherar4@trellian.com",
         "salary": "$0.00",
         "joinDate": "10/11/2021",
-        "position": "Marketing"
+        "position": "Marketing",
+        "profileURL": "https://avatars.dicebear.com/api/initials/:seed.svg"
     },
     {
         "id": "1086",
@@ -51,7 +56,8 @@
         "email": "freddick5@examiner.com",
         "salary": "$0.00",
         "joinDate": "09/04/2021",
-        "position": "Marketing"
+        "position": "Marketing",
+        "profileURL": "https://avatars.dicebear.com/api/initials/:seed.svg"
     },
     {
         "id": "990",
@@ -60,7 +66,8 @@
         "email": "rstiling6@dropbox.com",
         "salary": "$0.00",
         "joinDate": "03/08/2022",
-        "position": "Engineering"
+        "position": "Engineering",
+        "profileURL": "https://avatars.dicebear.com/api/initials/:seed.svg"
     },
     {
         "id": "518",
@@ -69,7 +76,8 @@
         "email": "nbareham7@google.com.br",
         "salary": "$0.00",
         "joinDate": "12/08/2021",
-        "position": "Legal"
+        "position": "Legal",
+        "profileURL": "https://avatars.dicebear.com/api/initials/:seed.svg"
     },
     {
         "id": "88",
@@ -78,7 +86,8 @@
         "email": "emarlowe8@usa.gov",
         "salary": "$0.00",
         "joinDate": "11/25/2021",
-        "position": "Human Resources"
+        "position": "Human Resources",
+        "profileURL": "https://avatars.dicebear.com/api/initials/:seed.svg"
     },
     {
         "id": "000",
@@ -87,6 +96,7 @@
         "email": "mwrack9@usda.gov",
         "salary": "$0.00",
         "joinDate": "06/01/2022",
-        "position": "Training"
+        "position": "Training",
+        "profileURL": "https://avatars.dicebear.com/api/initials/Mil Wrack.svg"
     }
 ]
