@@ -78,9 +78,6 @@ const SignInPage = () => {
                 <Button sx={styles} onClick={() => router('/forgot-password')}>
                     Forgot Password ?
                 </Button>
-
-                
-
                 
             </form>
 

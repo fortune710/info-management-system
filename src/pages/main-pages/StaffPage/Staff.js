@@ -1,13 +1,14 @@
-import Firebase from '../../../firebase-init';
+import Firebase from '../../../utils/firebase.utils';
 import { query, collection, getDocs, getFirestore } from 'firebase/firestore';
 import { useEffect, useState, useId } from 'react';
-import { AvatarGroup, Button } from '@mui/material';
+import { AvatarGroup, Box, Button, Grid } from '@mui/material';
 
 import staffData from '../../../mock/MOCK_DATA.json'
 import { useNavigate } from 'react-router-dom';
 import styles from './staff-page.module.scss';
 
 import { Avatar } from '@mui/material';
+import { flexCenter } from '../../../utils/style.utils';
 
 const StaffPage = () => {
     const navigate = useNavigate();
@@ -40,27 +41,39 @@ const StaffPage = () => {
                 <h1>Your Staff</h1>
             </div>
 
-            <div className={styles.staffDetail}>
-                <section className={styles.section}>
-                    <h3>Staff</h3>
-                    <AvatarGroup max={4}>
-                    {
-                        staff.filter((el, index) => index < 5).map(({ name, profileURL }, index) => (
-                            <Avatar key={index} />
-                        ))
-                    }
-                    </AvatarGroup>
-                    
-                    <Button 
-                        variant='contained' 
-                        disableElevation 
-                        onClick={() => navigate('/dashboard/add-staff')}>
-                        Add Staff
-                    </Button>
-                    
-                </section>
+            <Grid container>
+                <Grid item xs={12} md={6}>
+                    <section className={styles.section}>
+                        <h3>Staff</h3>
+                        <AvatarGroup max={4}>
+                        {
+                            staff.filter((el, index) => index < 5).map(({ name, profileURL }, index) => (
+                                <Avatar key={index} />
+                            ))
+                        }
+                        </AvatarGroup>
 
-            </div>
+                        <Box sx={{...flexCenter, justifyContent: 'space-between'}}>
+                            <Button 
+                                variant='contained' 
+                                disableElevation 
+                                onClick={() => navigate('/dashboard/add-staff')}>
+                                Add Staff
+                            </Button>
+
+                            <Button onClick={() => navigate('/dashboard/all-staff')}>
+                                See All
+                            </Button>
+                        </Box>
+                        
+                        
+                    </section>
+
+                </Grid>
+                <Grid item xs={12} md={6}>
+
+                </Grid>
+            </Grid>
         </main>
     )
 }

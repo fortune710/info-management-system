@@ -1,0 +1,31 @@
+.circle-icon-container {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary);
+    color: white;
+    border-radius: 50%;
+}
+
+.card {
+    padding: 8px;
+
+    div.cont {
+        display: flex;
+        height: 50px;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    h1 {
+        margin: 5px 0;
+    }
+}
+
+//Chip Colors
+.failed { background: var(--danger); }
+.delivered { background: var(--success); }
+.pending { background: var(--medium); }
+.delayed { background: var(--orange); }

@@ -1,5 +1,5 @@
-import { Search } from "@mui/icons-material";
-import { Chip, InputBase,  Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material";
+import { Search, Close } from "@mui/icons-material";
+import { IconButton, InputBase,  Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material";
 
 import inventory from '../../../mock/inventory.json';
 import './inventory.styles.scss';
@@ -24,6 +24,9 @@ const InventoryPage = () => {
                 <InputBase
                     placeholder="Search your Inventory"
                 />
+                <IconButton>
+                    <Close />
+                </IconButton>
             </Paper>
 
             <TableContainer 
@@ -43,7 +46,7 @@ const InventoryPage = () => {
                     <TableBody>
                         {
                             tableRows.map(row => (
-                                <TableRow>
+                                <TableRow key={row.id}>
                                     <TableCell>{row.id}</TableCell>
                                     <TableCell>{row.itemName}</TableCell>
                                     <TableCell>{row.quanityLeft}</TableCell>

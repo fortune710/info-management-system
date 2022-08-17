@@ -1,5 +1,5 @@
 import { useForm } from 'react-hook-form';
-import Firebase from '../../../firebase-init';
+import Firebase from '../../../utils/firebase.utils';
 import { collection, addDoc, getFirestore } from 'firebase/firestore';
 
 import Button from '../../../components/Button/Button';
