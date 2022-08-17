@@ -1,17 +1,22 @@
 import { useLocation, useNavigate, Outlet } from "react-router-dom"
-import { IoHome, IoPeople, IoLibrary, IoSettings, IoLogOut, IoExpand } from "react-icons/io5";
+import { IoExpand, IoContract } from "react-icons/io5";
 
+import { Logout, Home, Settings, People, Inventory } from "@mui/icons-material";
 
 
 import './main.styles.scss';
 import { useId, useState } from "react";
+import Header from "../../components/Header/Header";
 
 const MainAreaPage = () => {
     const screenWidth = window.innerWidth
     return(
         <div className="main-area-content">
             <SideMenu />
-            <Outlet/>
+            <div className="dashboard-content">
+                <Header/>
+                <Outlet/>
+            </div>
         </div>
 
     )
@@ -28,21 +33,21 @@ const SideMenu = () => {
         {   
             id: useId(),
             name: 'Home',
-            icon: <IoHome/>
+            icon: <Home/>
         },
         {
             id: useId(),
             name: 'Inventory',
-            icon: <IoLibrary/>
+            icon: <Inventory/>
         },
         {
             name: 'Staff',
-            icon: <IoPeople/>
+            icon: <People/>
         },
         {
             id: useId(),
             name: 'Settings',
-            icon: <IoSettings/>
+            icon: <Settings/>
         }
     ]
 
@@ -50,29 +55,23 @@ const SideMenu = () => {
         return(
             <div className="side-menu closed-menu">
                 <ul className="menu-list">
-                {
-                    MENU_ITEMS.map(({ id, name, icon }) => (
-                        <li key={id}
-                            onClick={() => router(`/dashboard/${name.toLowerCase()}` ,{})}
-                            className={`menu-list-item-closed ${location.pathname === '/dashboard/'+name.toLowerCase() ? 'active' : 'not-active'}`}>
-                            <span>
+                    {
+                        MENU_ITEMS.map(({ id, name, icon }) => (
+                            <li 
+                                key={id}
+                                onClick={() => router(`/dashboard/${name.toLowerCase()}` ,{})}
+                                className={`menu-list-item-closed ${location.pathname === '/dashboard/'+name.toLowerCase() ? 'active' : 'not-active'}`}>
                                 { icon }
-                            </span>
-                        </li>
-                    ))
-                }
+                            </li>
+                        ))
+                    }
 
-                <li className="menu-list-item-closed expand-menu" onClick={() => setClosed(false)}>
-                    <IoExpand/>
-                </li>
-                <li className="menu-list-item-closed log-out">
-                    <IoLogOut/>
-                </li>
-                       
-
-
-
-
+                    <li className="menu-list-item-closed expand-menu" onClick={() => setClosed(false)}>
+                        <IoExpand/>
+                    </li>
+                    <li className="menu-list-item-closed log-out">
+                        <Logout/>
+                    </li>
                 </ul>
             </div>
         )
@@ -87,19 +86,22 @@ const SideMenu = () => {
                             <li key={id}
                                 onClick={() => router(`/dashboard/${name.toLowerCase()}` ,{})}
                                 className={`menu-list-item ${location.pathname === '/dashboard/'+name.toLowerCase() ? 'active' : 'not-active'}`}>
-                                <span>
-                                    { icon }
-                                </span>
+                                { icon }
+                                
                                 <h4>{name}</h4>
                             </li>
                         ))
                     }
 
-                    <button onClick={() => setClosed(true)}>close</button>
+                    <li
+                        onClick={() => setClosed(true)}
+                        className="menu-list-item contrast-menu"
+                    >
+                        <IoContract/>
+                        <h4>Contrast Menu</h4>
+                    </li>
                     <li className="menu-list-item log-out">
-                        <span>
-                            <IoLogOut/>
-                        </span>
+                        <Logout/>
                         <h4>Log Out</h4>
                     </li>
                 </ul>

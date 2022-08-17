@@ -5,11 +5,13 @@
 
 .main-area-content{
     display: flex;
+    overflow-y: hidden;
 
 
     .side-menu{
         background: var(--dark);
         height: 100vh;
+        position: fixed;
 
         &.opened-menu { 
             width: auto;
@@ -17,11 +19,20 @@
             .menu-list {
                 width: 200px !important;
             }
+
+            +.dashboard-content {
+                margin-left: 238px;
+            }
         }
 
         &.closed-menu { 
             width: 70px;
             transition: 2s all ease-in;
+
+            +.dashboard-content {
+                margin-left: 70px;
+            }
+
         }
         
         .menu-list{
@@ -62,13 +73,7 @@
                 color: darken($color: #fff, $amount: 30);
             }
 
-            .log-out {
-                color: var(--danger);
-
-                &:hover {
-                    background: #fff !important;
-                }
-            }
+           
         }
 
     }
@@ -76,6 +81,24 @@
 
 
 .expand-menu {
-    background-color: var(--secondary);
     color: var(--primary);
+    margin-top: auto;
+}
+.contrast-menu {
+    background: lighten($color: #121212, $amount: 7);
+    color: var(--primary);
+    margin-top: auto;
+}
+
+.log-out {
+    color: var(--danger);
+    margin-top: auto;
+
+    &:hover {
+        background: #fff !important;
+    }
+}
+
+.dashboard-content {
+    flex-grow: 100;
 }
